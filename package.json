@@ -1,0 +1,40 @@
+{
+  "name": "typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "TypeScript boilerplate",
+  "main": "main.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc --project tsconfig.json",
+    "lint": "npx eslint . --ext .ts,.tsx",
+    "lint:fix": "npx eslint --fix . --ext .ts,.tsx",
+    "start:dev": "concurrently \"npm:build -- -w\" \"nodemon dist/main.js\"",
+    "start": "node dist/main.js"
+  },
+  "keywords": [
+    "typescript",
+    "boilerplate"
+  ],
+  "author": "Olivier Schweitzer <olivier.sch68@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.9.8",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "concurrently": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-oschweitzer": "^1.0.1",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.2",
+    "prettier": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "woodcutter": "^2.1.2"
+  }
+}
